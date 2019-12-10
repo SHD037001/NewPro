@@ -1,7 +1,8 @@
 import unittest
 
 import api
-from api import ApiCase
+from api.api_case import ApiCase
+
 from tools.assert_common import assert_common
 
 

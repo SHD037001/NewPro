@@ -6,7 +6,8 @@ import unittest
 from parameterized import parameterized
 
 import api
-from api import ApiLogin
+from api.api_login import ApiLogin
+
 from tools.assert_common import assert_common
 
 
