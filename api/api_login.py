@@ -1,15 +1,13 @@
 import requests
-import api
+
+from api import BASE_URL, HEADERS
 
 
-class ApiLogin:
-    # 初始化
+class ApiLogin(object):
     def __init__(self):
-        self.url = api.BASE_URL + "/api/sys/login"
-    #登录
+        self.login_url = BASE_URL + "/api/sys/login"
+    # 登录
     def login(self,mobile,password):
         data = {"mobile":mobile,"password":password}
-        return requests.post(url=self.url, json=data, headers=api.header)
-
-
+        return requests.post(url=self.login_url, json=data, headers=HEADERS)
 
